@@ -78,6 +78,9 @@ const Navbar = () => {
           <li>
             <Link className="text-green-500 font-semibold" to={"/about"}>About</Link>
           </li>
+          <li>
+            <Link className="text-green-500 font-semibold" to={"/contact"}>Contact us</Link>
+          </li>
           {!user && (
             <>
               <li>

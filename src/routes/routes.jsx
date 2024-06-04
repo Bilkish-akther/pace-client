@@ -16,6 +16,7 @@ import AllProducts from "../pages/AllProducts";
 import AddProducts from "../pages/AddProducts";
 import EditProducts from "../pages/EditProducts";
 import EditProfile from "../pages/EditProfile";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/login",
