@@ -12,8 +12,8 @@ export default function Categoris() {
             <div className="flex flex-wrap justify-center">
               <img className="" src="/src/assets/img/icon/iconfruit.png" alt="" />
             </div>
-            <h3 className="text-center text-2xl font-bold uppercase">
-</h3>
+            <h3 className="text-center text-2xl font-bold text-green-600 uppercase">
+            multiple fruits</h3>
 
             <div className="card-actions justify-end"></div>
           </div>
@@ -23,7 +23,7 @@ export default function Categoris() {
             <div className="flex flex-wrap justify-center">
               <img className="" src="/src/assets/img/icon/iconfruit.png" alt="" />
             </div>
-            <h3 className="text-center text-2xl font-bold uppercase"></h3>
+            <h3 className="text-center text-2xl font-bold text-green-600 uppercase">aggregate fruit</h3>
 
             <div className="card-actions justify-end"></div>
           </div>
@@ -33,7 +33,7 @@ export default function Categoris() {
             <div className="flex flex-wrap justify-center">
               <img className="" src="/src/assets/img/icon/iconfruit.png" alt="" />
             </div>
-            <h3 className="text-center text-2xl font-bold uppercase"> </h3>
+            <h3 className="text-center text-2xl text-green-600 font-bold uppercase">Pome</h3>
 
             <div className="card-actions justify-end"></div>
           </div>
