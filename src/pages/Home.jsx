@@ -4,6 +4,8 @@ import Accordion from '../components/home/Accordion';
 import Banner from '../components/home/Banner'
 import Products from '../components/home/Products';
 import Categoris from '../components/home/Categoris';
+import Contact from './Contact';
+import UserReview from './UserReview';
 
 
 const Home = () => {
@@ -15,8 +17,10 @@ const Home = () => {
             <Banner/>
             <Products data={data}/>
             <Categoris/>
-            
+            <UserReview/>
             <Accordion/>
+            <Contact/>
+            
            
         </div>
     );

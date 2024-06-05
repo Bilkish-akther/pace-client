@@ -7,24 +7,28 @@ const Dashboard = () => {
   const [userInfo, setUserInfo] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/user/${user?.email}`)
-      .then((res) => res.json()) 
+    fetch(`https://fruiterer-server-mynd.vercel.app/user/${user?.email}`)
+      .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);
 
-   console.log(userInfo);
+  console.log(userInfo);
   return (
     <div>
       <div className="flex justify-between mb-7">
         <h1 className="text-3xl text-green-600 font-bold">Profile Info</h1>
-        <Link to={`/dashboard/profile/edit/${userInfo?._id}`} className="btn text-white  bg-green-600 ">Edit Profile</Link>
+        <Link
+          to={`/dashboard/profile/edit/${userInfo?._id}`}
+          className="btn text-white  bg-green-600 "
+        >
+          Edit Profile
+        </Link>
       </div>
       <div>
         <h1>{userInfo?.name}</h1>
         <h1>{userInfo?.email}</h1>
       </div>
     </div>
-    
   );
 };
 

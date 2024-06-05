@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const SingleProductCardDashboard = ({ fruit, onDelete }) => {
-  const token = localStorage.getItem('token')
+  const token = localStorage.getItem("token");
   const { _id, title, brand, price, description, image_url } = fruit;
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:3000/fruits/${_id}`, {
+    await fetch(`https://fruiterer-server-mynd.vercel.app/fruits/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
-        authorization: `Bearer ${token}`
+        authorization: `Bearer ${token}`,
       },
     })
       .then((res) => res.json())

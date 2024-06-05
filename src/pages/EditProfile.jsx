@@ -9,7 +9,7 @@ export default function EditProfile() {
 
     const form = e.target;
     const name = form.name.value;
-   
+
     const age = form.age.value;
     const mobileNumber = form.mobileNumber.value;
 
@@ -20,23 +20,27 @@ export default function EditProfile() {
       email: data?.email,
     };
 
-    fetch(`http://localhost:3000/user/${data?.email}`,{
+    fetch(`https://fruiterer-server-mynd.vercel.app/user/${data?.email}`, {
       method: "PATCH",
       headers: {
-        "Content-Type":"application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(userData),
     })
-    .then((res) => res.json())
-    .then((data) => console.log(data))
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
 
   return (
     <div>
-      <h1 className="text-center mb-4 font-bold text-2xl text-green-600">Edit profile</h1>
+      <h1 className="text-center mb-4 font-bold text-2xl text-green-600">
+        Edit profile
+      </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
         <div className="flex flex-col">
-          <label className="text-green-600 font-semibold" htmlFor="">User Name</label>
+          <label className="text-green-600 font-semibold" htmlFor="">
+            User Name
+          </label>
           <input
             type="text"
             name="name"
@@ -45,7 +49,9 @@ export default function EditProfile() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-green-600 font-semibold" htmlFor="">User Email</label>
+          <label className="text-green-600 font-semibold" htmlFor="">
+            User Email
+          </label>
           <input
             type="text"
             name="email"
@@ -55,11 +61,19 @@ export default function EditProfile() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-green-600 font-semibold" htmlFor="">User Age</label>
-          <input type="text" name="age" className="py-2 px-1 rounded-xl bg-pink-50" />
+          <label className="text-green-600 font-semibold" htmlFor="">
+            User Age
+          </label>
+          <input
+            type="text"
+            name="age"
+            className="py-2 px-1 rounded-xl bg-pink-50"
+          />
         </div>
         <div className="flex flex-col">
-          <label className="text-green-600 font-semibold" htmlFor="">User Mobile</label>
+          <label className="text-green-600 font-semibold" htmlFor="">
+            User Mobile
+          </label>
           <input
             type="text"
             name="mobileNumber"

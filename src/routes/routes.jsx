@@ -27,13 +27,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/fruits"),
+        loader: () => fetch("https://fruiterer-server-mynd.vercel.app/fruits"),
       },
       {
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/fruits/${params.id}`),
+          fetch(`https://fruiterer-server-mynd.vercel.app/fruits/${params.id}`),
       },
       {
         path: "/about",
@@ -70,17 +70,19 @@ export const router = createBrowserRouter([
         path: "profile/edit/:id",
         element: (
           <PrivateRoute>
-            <EditProfile/>
+            <EditProfile />
           </PrivateRoute>
         ),
-        loader:({params}) =>
-          fetch(`http://localhost:3000/user/get/${params.id}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://fruiterer-server-mynd.vercel.app/user/get/${params.id}`
+          ),
       },
       {
         path: "all-products",
         element: (
           <PrivateRoute>
-            <AllProducts/>  
+            <AllProducts />
           </PrivateRoute>
         ),
       },
@@ -88,19 +90,19 @@ export const router = createBrowserRouter([
         path: "add-products",
         element: (
           <PrivateRoute>
-            <AddProducts/>  
+            <AddProducts />
           </PrivateRoute>
-        ),  
+        ),
       },
       {
         path: "all-products/edit/:id",
         element: (
           <PrivateRoute>
-            <EditProducts/> 
+            <EditProducts />
           </PrivateRoute>
-        ), 
-        loader:({params}) =>
-          fetch(`http://localhost:3000/fruits/${params.id}`),
+        ),
+        loader: ({ params }) =>
+          fetch(`https://fruiterer-server-mynd.vercel.app/fruits/${params.id}`),
       },
     ],
   },

@@ -16,7 +16,7 @@ export default function EditProducts() {
   // console.log(fruit);
 
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem("token");
     e.preventDefault();
     toast("Product Update Successfully");
 
@@ -28,18 +28,21 @@ export default function EditProducts() {
     const description = form.description.value;
     const image_url = form.image_url.value;
 
-    const data = { image_url, title,  price, description }; 
+    const data = { image_url, title, price, description };
 
     console.log(data);
 
-    await fetch(`http://localhost:3000/fruits/${fruit._id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-type": "application/json",
-        authorization: `Bearer ${token}`
-      },
-      body: JSON.stringify(data),
-    })
+    await fetch(
+      `https://fruiterer-server-mynd.vercel.app/fruits/${fruit._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-type": "application/json",
+          authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -47,8 +50,9 @@ export default function EditProducts() {
   };
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center text-green-600 uppercase">Edit Product</h1>
-     
+      <h1 className="text-5xl font-bold text-center text-green-600 uppercase">
+        Edit Product
+      </h1>
 
       <div className="my-16">
         <form onSubmit={handleSubmit}>
@@ -102,8 +106,7 @@ export default function EditProducts() {
               onChange={(e) => setImageURL(e.target.value)}
             />
           </div>
-        
-         
+
           <div className="mt-2 flex justify-center items-center ">
             <input
               className="btn mt-4 text-white  p-4 bg-green-600"

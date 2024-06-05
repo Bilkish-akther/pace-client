@@ -2,9 +2,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AddProducts() {
-  
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem("token");
     e.preventDefault();
     toast("Product Add Successfully");
 
@@ -16,13 +15,13 @@ export default function AddProducts() {
     const dscription = form.dscription.value;
     const image_url = form.image_url.value;
 
-    const data = { image_url, title,  price, dscription };
+    const data = { image_url, title, price, dscription };
 
-    await fetch("http://localhost:3000/fruits", {
+    await fetch("https://fruiterer-server-mynd.vercel.app/fruits", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
-        authorization: `Bearer ${token}`
+        authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(data),
     })
@@ -80,7 +79,7 @@ export default function AddProducts() {
               placeholder="Image Url"
             />
           </div>
-          
+
           <div className="mt-2 flex justify-center items-center ">
             <input
               className="btn mt-4 text-white  p-4 bg-green-600"

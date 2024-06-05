@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero  bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
           <img src="/src/assets/img/contactus.png" alt="" />
