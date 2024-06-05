@@ -8,7 +8,7 @@ export default function AllProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://fruiterer-server-mynd.vercel.app/fruits `)
+    fetch(`https://fruiterer-server2.onrender.com/fruits `)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

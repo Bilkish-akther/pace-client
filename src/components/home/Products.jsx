@@ -9,7 +9,7 @@ const Products = ({ data }) => {
         Our Products
       </h1>
       <div className="flex justify-center gap-4">
-        {data?.slice(0, 3).map((fruit) => (
+        {data?.slice(0 , 3).map((fruit) => (
           <SingleProducts key={fruit._id} fruit={fruit} />
         ))}
       </div>

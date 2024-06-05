@@ -17,7 +17,7 @@ export default function AddProducts() {
 
     const data = { image_url, title, price, dscription };
 
-    await fetch("https://fruiterer-server-mynd.vercel.app/fruits", {
+    await fetch("https://fruiterer-server2.onrender.com/fruits", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

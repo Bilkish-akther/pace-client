@@ -3,7 +3,7 @@
 // export default function Search() {
 //     const [data setData] =useState([])
 //     useEffect(() => {
-//         fetch(`https://fruiterer-server-mynd.vercel.app/fruits`)
+//         fetch(`https://fruiterer-server2.onrender.com/fruits`)
 //         .then(res => setData(res.data))
 //         .catch(err => console.log(err))
 //     },[])

@@ -7,7 +7,7 @@ const SingleProductCardDashboard = ({ fruit, onDelete }) => {
   const { _id, title, brand, price, description, image_url } = fruit;
 
   const handleDelete = async () => {
-    await fetch(`https://fruiterer-server-mynd.vercel.app/fruits/${_id}`, {
+    await fetch(`https://fruiterer-server2.onrender.com/fruits/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

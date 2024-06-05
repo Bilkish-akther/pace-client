@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [userInfo, setUserInfo] = useState();
 
   useEffect(() => {
-    fetch(`https://fruiterer-server-mynd.vercel.app/user/${user?.email}`)
+    fetch(`https://fruiterer-server2.onrender.com/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);

@@ -33,7 +33,7 @@ const Registration = () => {
             email: data?.user?.email,
             name: name,
           };
-          fetch("https://fruiterer-server-mynd.vercel.app/user", {
+          fetch("https://fruiterer-server2.onrender.com/user", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

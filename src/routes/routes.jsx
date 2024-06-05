@@ -27,13 +27,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://fruiterer-server-mynd.vercel.app/fruits"),
+        loader: () => fetch("https://fruiterer-server2.onrender.com/fruits"),
       },
       {
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`https://fruiterer-server-mynd.vercel.app/fruits/${params.id}`),
+          fetch(`https://fruiterer-server2.onrender.com/fruits/${params.id}`),
       },
       {
         path: "/about",
@@ -74,9 +74,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://fruiterer-server-mynd.vercel.app/user/get/${params.id}`
-          ),
+          fetch(`https://fruiterer-server2.onrender.com/user/get/${params.id}`),
       },
       {
         path: "all-products",
@@ -102,7 +100,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://fruiterer-server-mynd.vercel.app/fruits/${params.id}`),
+          fetch(`https://fruiterer-server2.onrender.com/fruits/${params.id}`),
       },
     ],
   },

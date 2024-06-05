@@ -20,7 +20,7 @@ export default function EditProfile() {
       email: data?.email,
     };
 
-    fetch(`https://fruiterer-server-mynd.vercel.app/user/${data?.email}`, {
+    fetch(`https://fruiterer-server2.onrender.com/user/${data?.email}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -32,17 +32,14 @@ export default function EditProducts() {
 
     console.log(data);
 
-    await fetch(
-      `https://fruiterer-server-mynd.vercel.app/fruits/${fruit._id}`,
-      {
-        method: "PATCH",
-        headers: {
-          "Content-type": "application/json",
-          authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(data),
-      }
-    )
+    await fetch(`https://fruiterer-server2.onrender.com/fruits/${fruit._id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+        authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(data),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
