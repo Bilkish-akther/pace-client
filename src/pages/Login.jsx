@@ -36,7 +36,8 @@ const Login = () => {
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            a id nisi. Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+           
           </p>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

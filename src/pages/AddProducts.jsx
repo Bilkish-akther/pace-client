@@ -47,14 +47,7 @@ export default function AddProducts() {
               placeholder="Title"
             />
           </div>
-          {/* <div className="mt-3">
-            <input
-              className="bg-gray-100 p-4 w-full border rounded-lg border-green-600 "
-              type="text"
-              name="brand"
-              placeholder="Brand"
-            />
-          </div> */}
+         
           <div className="mt-3">
             <input
               className="bg-gray-100 p-4 w-full border rounded-lg border-green-600 "
